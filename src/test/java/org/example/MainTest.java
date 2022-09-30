@@ -36,4 +36,33 @@ class MainTest {
         // THEN
         assertFalse(actual);
     }
+    @Test
+    public void checkPasswordOnNumbersfalse() {
+        // GIVEN
+        String password = "QWERTZUI";
+        // WHEN
+        boolean actual = Main.passwordInput(password);
+        // THEN
+        assertFalse(actual);
+    }
+
+    @Test
+    public void checkPasswordOnNumberstrue() {
+        // GIVEN
+        String password = "QWERTZUI213123";
+        // WHEN
+        boolean actual = Main.passwordInput(password);
+        // THEN
+        assertTrue(actual);
+    }
+
+    @Test
+    public void checkPasswordOnNumbersToShortfalse() {
+        // GIVEN
+        String password = "13123";
+        // WHEN
+        boolean actual = Main.passwordInput(password);
+        // THEN
+        assertFalse(actual);
+    }
 }

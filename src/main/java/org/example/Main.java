@@ -5,9 +5,14 @@ public class Main {
         System.out.println("Hello world!");
     }
     public static boolean passwordInput(String password) {
-        if (password.length() < 8) {
+        if (password.matches(".*[0-9].*")) {
+            if (password.length() < 8) {
+                return false;
+            }
+            else return password.length() <= 100;
+        }
+        else {
             return false;
         }
-        else return password.length() <= 100;
     }
 }
