@@ -15,12 +15,10 @@ public class Main {
         }
         else if (!password.matches(".*[0-9].*")) {
             System.out.println("Passwort enthält keine Zahlen!");
-
             return false;
         }
         else if (password.length() < 8) {
             System.out.println("Passwort ist zu kurz!");
-
             return false;
         }
         else if (password.length() > 100) {
