@@ -6,7 +6,9 @@ public class Main {
     }
     public static boolean passwordInput(String password) {
         if  (!password.matches((".*[A-Z].*"))) {
-            System.out.println("passwort enthält keine Großbuchstaben");
+            return false;
+        }
+        else if  (!password.matches((".*[a-z].*"))) {
             return false;
         }
         else if (!password.matches(".*[0-9].*")) {

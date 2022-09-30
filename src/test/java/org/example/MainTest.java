@@ -9,7 +9,7 @@ class MainTest {
     @Test
     public void checkPasswordLengthTestTrue() {
         // GIVEN
-        String password = "QWERTZ1234";
+        String password = "QwERTZ1234";
         // WHEN
         boolean actual = Main.passwordInput(password);
         // THEN
@@ -49,7 +49,7 @@ class MainTest {
     @Test
     public void checkPasswordOnNumberstrue() {
         // GIVEN
-        String password = "QWERTZUI213123";
+        String password = "QWERtZUI213123";
         // WHEN
         boolean actual = Main.passwordInput(password);
         // THEN
@@ -59,7 +59,7 @@ class MainTest {
     @Test
     public void checkPasswordOnNumbersToShortfalse() {
         // GIVEN
-        String password = "13123";
+        String password = "aA1123";
         // WHEN
         boolean actual = Main.passwordInput(password);
         // THEN
@@ -80,6 +80,16 @@ class MainTest {
     public void checkPasswordUpperCaseFalse() {
         // GIVEN
         String password = "qwertz123";
+        // WHEN
+        boolean actual = Main.passwordInput(password);
+        // THEN
+        assertFalse(actual);
+    }
+
+    @Test
+    public void checkPasswordLowerCaseFalse() {
+        // GIVEN
+        String password = "QWERTZ123";
         // WHEN
         boolean actual = Main.passwordInput(password);
         // THEN
