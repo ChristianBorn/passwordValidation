@@ -65,4 +65,24 @@ class MainTest {
         // THEN
         assertFalse(actual);
     }
+
+    @Test
+    public void checkPasswordUpperCaseTrue() {
+        // GIVEN
+        String password = "qwertZ123";
+        // WHEN
+        boolean actual = Main.passwordInput(password);
+        // THEN
+        assertTrue(actual);
+    }
+
+    @Test
+    public void checkPasswordUpperCaseFalse() {
+        // GIVEN
+        String password = "qwertz123";
+        // WHEN
+        boolean actual = Main.passwordInput(password);
+        // THEN
+        assertFalse(actual);
+    }
 }
