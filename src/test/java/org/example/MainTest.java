@@ -89,7 +89,7 @@ class MainTest {
     @Test
     public void checkPasswordLowerCaseFalse() {
         // GIVEN
-        String password = "QWERTZ123";
+        String password = "QwERTZ123";
         // WHEN
         boolean actual = Main.passwordInput(password);
         // THEN
