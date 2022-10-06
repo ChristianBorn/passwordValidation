@@ -3,6 +3,7 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
         System.out.println(passwordInput("asdasdasdF1"));
+        System.out.println("Test for Github Workflow");
     }
     public static boolean passwordInput(String password) {
         if  (!password.matches((".*[A-Z].*"))) {
